@@ -1,0 +1,48 @@
+:root {
+    --logo-text-size: 6rem;
+    --logo-text-family: "Norse", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Norse;
+    src: url("./assets/fonts/Norse/Norse-Bold.otf");
+    font-weight: 700;
+}
+
+.left-header {
+    max-width: 100%;
+    position: relative;
+}
+
+.img-logo-container {
+    display: flex;
+    align-items: center;
+    margin-block-start: 12em;
+    margin-inline-start: 3.5em;
+    position: absolute;
+    background-color: var();
+}
+
+.logo {
+    display: inline-block;
+    max-width: 5rem;
+}
+
+.logo_text {
+    display: inline-block;
+    max-width: 6rem;
+    font-size: var(--logo-text-size);
+    font-family: var(--logo-text-family);
+}
+
+.unsplash-img {
+    max-width: 28rem;
+    height: 53rem;
+    position: absolute;
+}
