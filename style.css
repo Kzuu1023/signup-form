@@ -8,6 +8,7 @@
     --btn-create-color: #596d48;
 
     --error: #b91c1c;
+    --valid: #00ff00;
     --outline: #1d4ed8;
 }
 
@@ -99,24 +100,36 @@ h1 {
     margin-top: 1em;
 }
 
+.input-field form {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 20px;
+}
+
 .input-field {
     padding-left: 2rem;
     background-color: white;
     margin-block-start: 2.5rem;
 }
 
-.input-field form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-}
-
 .input-field input {
-    margin-bottom: 1rem;
+    margin-bottom: 0.9rem;
 }
 
-.input-field input:focus {
+.input-container input:focus {
     border-color: var(--outline);
+}
+
+.input-field .invalid input {
+    border-color: var(--error);
+}
+
+.input-field .valid input {
+    border-color: var(--valid);
+}
+
+.input-field .create-btn input {
+    border-color: var(--btn-create-color);
 }
 
 .input-field label {
@@ -125,6 +138,12 @@ h1 {
     font-size: 0.7rem;
     font-weight: 700;
     margin-bottom: 0.1rem;
+}
+
+.error-msg {
+    display: block;
+    font-size: 8px;
+    color: var(--error);
 }
 
 .create-btn {
@@ -149,6 +168,7 @@ h1 {
 }
 
 .submit-container {
+    display: block;
     padding-block-start: 1rem;
     padding-block-end: 1rem;
 }
@@ -156,8 +176,12 @@ h1 {
 #submit-btn {
     width: 9.8rem;
     height: 2.2rem;
-
     color: white;
     border: none;
     border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #0056b3; /* Darken the button on hover */
 }
